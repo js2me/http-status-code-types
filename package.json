@@ -15,7 +15,6 @@
   "keywords": [],
   "author": "js2me",
   "license": "MIT",
-  "bin": "bin.mjs",
   "description": "",
   "bugs": {
     "url": "https://github.com/js2me/http-status-code-types/issues"

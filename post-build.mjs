@@ -6,7 +6,8 @@ postBuildScript({
   srcDirName: 'src',
   filesToCopy: ['LICENSE', 'README.md'],
   updateVersion: process.env.PUBLISH_VERSION,
-  onDone: (versionsDiff, _, packageJson, { targetPackageJson }) => {
+  onDone: (versionsDiff, { $ } , packageJson, { targetPackageJson }) => {
+    $(`cp -f src/index.ts dist/index.d.ts`);
 
     if (process.env.PUBLISH) {
       publishScript({

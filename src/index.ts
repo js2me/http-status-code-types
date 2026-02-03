@@ -2,7 +2,9 @@ export type HttpInformationalStatusCode =
   // 1xx Informational
   | /** 100 Continue - Client should send request body */ 100
   | /** 101 Switching Protocols - Protocol upgrade accepted */ 101
-  | /** 102 Processing (WebDAV) - Request received, processing continues */ 102;
+  | /** 102 Processing (WebDAV) - Request received, processing continues */ 102
+  | /** 103 Early Hints - Hints before final response */ 103
+  | /** 104 Upload Resumption Supported - Experimental/temporary */ 104;
 
 export type HttpSuccessStatusCode =
   // 2xx Success
@@ -54,6 +56,7 @@ export type HttpClientErrorStatusCode =
   | /** 422 Unprocessable Entity - Semantic errors */ 422
   | /** 423 Locked - Resource locked (WebDAV) */ 423
   | /** 424 Failed Dependency - Dependent request failed */ 424
+  | /** 425 Too Early - Request may be replayed */ 425
   | /** 426 Upgrade Required - Protocol upgrade required */ 426
   | /** 428 Precondition Required - Requires conditional request */ 428
   | /** 429 Too Many Requests - Rate limit exceeded */ 429
